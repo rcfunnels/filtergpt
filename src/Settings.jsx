@@ -16,31 +16,33 @@ function Settings({onLogout, loadingCredits, remaining, total}) {
           <div className="div">GPT Email Credits</div>
           <div className="spacer-2" />
         </div>
-            <CircularProgressbarWithChildren value={(remaining / total) * 100} className="max-h-52"
-            styles={{
-              path: {
-                stroke: `rgba(60, 91, 243, 1)`,
-              },
-            }}
-            >
-            <div className="description">
-                <h1 className="h-1">{remaining}</h1>
-                <div className="emails-remaining">
+        <div className="max-h-52" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}> 
+          <CircularProgressbarWithChildren value={(remaining / total + 0.0) * 100} className="max-h-52"
+              styles={{
+                  path: {
+                      stroke: `rgba(60, 91, 243, 1)`,
+                  },
+              }}
+              >
+          </CircularProgressbarWithChildren>
+          <div className="description" style={{position: 'absolute'}}>
+              <h1 className="h-1">{remaining}</h1>
+              <div className="emails-remaining">
                   emails
                   <br />
                   remaining
-                </div>
               </div>
-            </CircularProgressbarWithChildren>
-            <div className='w-full px-20 pt-4'>
-                <button className="filer-buy-bar" onClick={() => onLogout()}>
-                    <div className="filer-title-bar">
-                        <div className="spacer-2" />
-                        <div className="text-wrapper-3">Buy More</div>
-                        <div className="spacer-2" />
-                    </div>
-                </button>
-            </div>
+          </div>
+      </div>
+        <div className='w-full px-20 pt-4'>
+            <button className="filer-buy-bar" onClick={() => onLogout()}>
+                <div className="filer-title-bar">
+                    <div className="spacer-2" />
+                    <div className="text-wrapper-3">Buy More</div>
+                    <div className="spacer-2" />
+                </div>
+            </button>
+        </div>
       </div>
     </div>
      )}

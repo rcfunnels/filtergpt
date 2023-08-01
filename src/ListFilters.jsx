@@ -18,22 +18,24 @@ function ListFilters({ filters, onFilterSelect, onCreateFilter, loadingCredits, 
             <div className="text-wrapper-2">Buy More</div>
           </div>
         </div>
-            <CircularProgressbarWithChildren value={(remaining / total + 0.0) * 100} className="max-h-52"
-            styles={{
-              path: {
-                stroke: `rgba(60, 91, 243, 1)`,
-              },
-            }}
-            >
-            <div className="description">
-                <h1 className="h-1">{remaining}</h1>
-                <div className="emails-remaining">
+        <div className="max-h-52" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}> 
+          <CircularProgressbarWithChildren value={(remaining / total + 0.0) * 100} className="max-h-52"
+              styles={{
+                  path: {
+                      stroke: `rgba(60, 91, 243, 1)`,
+                  },
+              }}
+              >
+          </CircularProgressbarWithChildren>
+          <div className="description" style={{position: 'absolute'}}>
+              <h1 className="h-1">{remaining}</h1>
+              <div className="emails-remaining">
                   emails
                   <br />
                   remaining
-                </div>
               </div>
-            </CircularProgressbarWithChildren>
+          </div>
+      </div>
       </div>
     </div>
     )}
