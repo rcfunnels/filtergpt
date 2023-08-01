@@ -1,7 +1,5 @@
 .home-page {
     align-items: center;
-    background: radial-gradient(50% 50% at 50% 50%, rgb(49, 15, 79) 19.27%, rgb(13, 1, 38) 57.29%);
-    background-color: var(--vibrant-bg);
     border: 1px none;
     display: flex;
     flex-direction: column;
