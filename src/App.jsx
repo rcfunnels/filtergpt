@@ -42,7 +42,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/login/:token?" element={<LoginScreen />} />
+      <Route path="/login">
+        <Route path=":token" element={<LoginScreen />} />
+        <Route path="" element={<LoginScreen />} />
+      </Route>
       <Route path="/" element={<HomePage />} />
     </Routes>
   );
