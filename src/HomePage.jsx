@@ -57,14 +57,12 @@ function HomePage() {
                 };
             
                 fetchData();
-        } else {
+        }
+        else {
             navigate('/login');
         }
     }, []);
 
-    useEffect(() => {
-        
-    }, []);
 
     const handleLogout = () => {
         firebase.auth().signOut().then(() => {

@@ -33,6 +33,8 @@ function App() {
     const unsubscribe = firebase.auth().onAuthStateChanged(user => {
       if (!user) {
         navigate("/login");
+      } else {
+        navigate("/");
       }
     });
 
