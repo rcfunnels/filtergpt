@@ -49,7 +49,7 @@ function Settings({onLogout, loadingCredits, remaining, total}) {
     <div className="usage-summary-2">
       <div className="text-wrapper-3  pt-8"></div>
       <ul className="filters-list">
-        <button className="filter" onClick={() => console.log('clicked')}>
+        <button className="filter" onClick={() => window.open("https://filtergpt.framer.ai", "_blank")}>
             <div className="filer-title-bar">
               <div className="text-wrapper-3">About Us</div>
               <div className="spacer-2" />
@@ -58,7 +58,7 @@ function Settings({onLogout, loadingCredits, remaining, total}) {
               </svg>
             </div>
           </button>
-          <button className="filter" onClick={() => console.log('clicked')}>
+          <button className="filter" onClick={()=> window.open("https://www.termsfeed.com/live/2bc03000-6dfd-459c-b85f-d08b22cca04b", "_blank")}>
             <div className="filer-title-bar">
               <div className="text-wrapper-3">Privacy Policy</div>
               <div className="spacer-2" />
@@ -67,7 +67,7 @@ function Settings({onLogout, loadingCredits, remaining, total}) {
               </svg>
             </div>
           </button>
-          <button className="filter" onClick={() => console.log('clicked')}>
+          <button className="filter" onClick={()=> window.open("https://www.termsfeed.com/live/d245275c-bf7e-4cac-83a9-321339abe5d3", "_blank")}>
             <div className="filer-title-bar">
               <div className="text-wrapper-3">Terms and Conditions</div>
               <div className="spacer-2" />

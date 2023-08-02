@@ -154,9 +154,8 @@ function FilterDetail({ filter, creatingNewFilter, onFilterCreated, onFilterDele
             if (currentUser) {
                 const uid = currentUser.uid;
                 const db = firebase.firestore();
-                db.collection('accounts').doc(uid).collection('filters').doc(filter.docId).delete()
+                db.collection('accounts').doc(uid).collection('filters').doc(filter.id).delete()
                     .then(() => {
-                        console.log("Filter successfully deleted!");
                         onFilterDeleted(filter); // call the new prop here
                     }).catch((error) => {
                         console.error("Error removing filter: ", error);
